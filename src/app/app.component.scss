@@ -1,0 +1,18 @@
+.wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  .content {
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+    app-sidebar {
+      flex-grow: 1;
+    }
+    main {
+      flex-grow: 7;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+aside {
+  box-sizing: border-box;
+  margin-right: 20px;
+  margin-top: 40px;
+  .nav-item {
+    a {
+      background-image: none;
+      font-size: 24px;
+      line-height: 28px;
+      text-transform: capitalize;
+      display: block;
+      margin-bottom: 20px;
+      font-weight: 700;
+      &:hover {
+        color: hsla(0,0%,100%,.4);
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<div class="main-content">
+  <div class="header-content">
+    <h1>New and trending</h1>
+    <p>Based on player counts and release date</p>
+  </div>
+  <ul class="game-list" *ngIf="gameResponse">
+    <li class="list-item" *ngFor="let game of gameResponse.results">
+      <div class="image-block">
+        <img [src]="game.background_image" alt="">
+      </div>
+      <div class="info-block">
+        <div class="info-intro-section">
+          <span>{{ game.name }}</span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
