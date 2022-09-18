@@ -16,6 +16,6 @@ export class GameResolver implements Resolve<ResponseDataModel<GameModel>> {
   constructor(private gameApiService: GameApiService) {
   }
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<ResponseDataModel<GameModel>> {
-    return this.gameApiService.getAll();
+    return this.gameApiService.getAll(`&page=1&page_size=40`);
   }
 }

@@ -17,5 +17,6 @@ export interface GameModel {
   suggestions_count: number,
   updated: number,
   esrb_rating: Object,
+  short_screenshots: {id: number, image: string}[],
   platforms: []
 }

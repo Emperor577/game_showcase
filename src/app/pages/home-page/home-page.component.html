@@ -1,7 +1,40 @@
-<div class="main-content">
+<div class="main-content"
+      infinite-scroll
+     [infiniteScrollDistance]="2"
+     [infiniteScrollThrottle]="1000"
+     (scrolled)="onScroll()"
+>
   <div class="header-content">
     <h1>New and trending</h1>
     <p>Based on player counts and release date</p>
+    <div class="control-block">
+      <div class="control-item">
+        <span class="item-title">Sort by:</span>
+        <div class="item-action-block">
+          <div class="action" (click)="sortBy('rating')">
+            <span class="action-name">Rating</span>
+            <fa-icon [icon]="sortByRating === 'asc' ? sortByAscending : sortByDescending"></fa-icon>
+          </div>
+          <div class="action" (click)="sortBy('release-date')">
+            <span class="action-name">Release Date</span>
+            <fa-icon [icon]="sortByReleaseDate === 'asc' ? sortByAscending : sortByDescending"></fa-icon>
+          </div>
+        </div>
+      </div>
+      <div class="control-item">
+        <span class="item-title">Platform:</span>
+        <div class="item-action-block">
+          <div class="action" (click)="sortBy('rating')">
+            <span class="action-name">Rating</span>
+            <fa-icon [icon]="sortByRating === 'asc' ? sortByAscending : sortByDescending"></fa-icon>
+          </div>
+          <div class="action" (click)="sortBy('release-date')">
+            <span class="action-name">Release Date</span>
+            <fa-icon [icon]="sortByReleaseDate === 'asc' ? sortByAscending : sortByDescending"></fa-icon>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <ul class="game-list" *ngIf="gameResponse">
     <li class="list-item" *ngFor="let game of gameResponse.results">
